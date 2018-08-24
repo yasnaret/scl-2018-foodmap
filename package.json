@@ -1,0 +1,23 @@
+{
+  "name": "scl-2018-01-foodmap",
+  "version": "1.0.0",
+  "description": "foodmap testing",
+  "main": "controller.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasnaret/scl-2018-01-foodmap.git"
+  },
+  "author": "Yasnaret Soto Almonacid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yasnaret/scl-2018-01-foodmap/issues"
+  },
+  "homepage": "https://github.com/Yasnaret/scl-2018-01-foodmap#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}

@@ -1,0 +1,33 @@
+html,body {
+    background: url('../img/comida.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+#LOGO{
+   width: 100%
+}
+
+.jumbotron{
+    background-color:#46332cd4 
+}
+
+
+.left {
+    float: left;
+}
+
+.center {
+    float: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.right {
+    float: right;
+}
+
+

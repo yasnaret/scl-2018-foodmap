@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+    <title>FOODMAP</title>
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1ub6mC2caVbYbgj6Ww_aCioXqnZxLtzs&libraries=places" type="text/javascript" ></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+
+    <!-- Just an image -->
+    <nav id="navbar-main" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/3.jpg" width="40" height="40" class="d-inline-block align-top" alt=""> FOODMAP
+        </a>
+    </nav>
+
+
+
+    <!-- ==== HEADERWRAP ==== -->
+    <div id="headerwrap" id="home" name="home">
+        <header class="clearfix">
+            <h1>
+                <span class="icon icon-shield"></span>
+            </h1>
+            <p>Encuentra Tu Restaurant Favorito</p>
+
+        </header>
+    </div>
+    <!-- /headerwrap -->
+
+    <!-- ==== GREYWRAP ==== -->
+    <div id="greywrap">
+        <div class="row">
+            <div class="col-lg-4 callout">
+
+                <h4>Selecciona el tipo de comida </h4>
+                <button id="chatarra" class="btn btn-primary btn-lg btn-block">Comida Rápida</button>
+                <button id="sushi" class="btn btn-primary btn-lg btn-block">Sushi</button>
+                <button id="bares" class="btn btn-primary btn-lg btn-block">Happy-Hours</button>
+                <button id="peruana" class="btn btn-primary btn-lg btn-block">Peruana</button>
+                <button id="arabe" class="btn btn-primary btn-lg btn-block">Arabe</button>
+
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4 callout">
+                <span class="icon icon-eye"></span>
+                <h3></h3>
+                <div class="justify-content-center align-items-center" id="mapa" style="height: 350px;"></div>
+            </div>
+            <!-- col-lg-4 -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <i  id='home' class="fas fa-store fa-2x" ></i><h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="map_canvas" style="width:250px; height:250px"></div>
+                            <span id="adressSpan" class="modalSpan"><i  class="fas fa-location-arrow"></i><p id="address" class="textSpan"></p></span>
+                            <span id="phoneSpan" class="modalSpan"><i class="fas fa-phone-volume"></i><p id="phoneNumber" class="textSpan"> </p></span>
+                            <span id="clockSpan" class="modalSpan"><i class="far fa-clock"></i><p id="openNow" class="textSpan"></p></span>
+                            <span id="starSpan" class="modalSpan"><span id="lilStars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p id="rating" class="textSpan"></p></span>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------fin modal---------- -->
+
+            <div class="col-lg-4 callout">
+                <span class="icon icon-heart"></span>
+                <h4>Busca por palabras</h4>
+                <div class="photos-section" id="img-container">
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-inline">
+                            <input id="buscador"class="form-control mr-sm-2" placeholder="Search" >
+                            <button id= "busqueda" class="btn btn-outline-success my-2 my-sm-0" >Search</button>
+                        </form>
+                    </nav>
+                </div>
+            </div>
+            <!-- col-lg-4 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- greywrap -->
+
+
+    <!-- ==== SECTION DIVIDER1 -->
+  
+                
+    <div class="containertags ">
+        <div class="left">
+            <button id="left-button">
+                <i class="fas fa-angle-left"></i>
+            </button>
+        </div>
+        
+            <div class="center" id="imgContainer">
+                    
+            </div>
+        
+        <div class="right">
+            <button id="right-button">
+                <i class="fas fa-angle-right"></i>
+            </button>
+            
+        </div>
+    </div>
+     
+   
+    <!-- section -->
+
+    <div id="footerwrap">
+        <div class="container">
+            <h6 id="footer">
+                <a>FOODMAP</a> -LABORATORIA 2018</h6>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/controller.js"></script>
+    <script src="./assets/js/view.js"></script>
+    <script src="./assets/js/model.js"></script>
+</body>
+
+</html>
