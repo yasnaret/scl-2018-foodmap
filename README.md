@@ -7,5 +7,6 @@ Web App para buscar los restaurates favoritos disponibles cerca de tí entregado
 - Télefono de Contacto
 - Rating
 
+#### Desarrollado para [Laboratoria](http://laboratoria.la)
 
 [Despliegue](https://yasnaret.github.io/scl-2018-01-foodmap/)
